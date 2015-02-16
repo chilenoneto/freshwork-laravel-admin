@@ -1,15 +1,15 @@
 <?php
 
 Route::get('/login',[
-    'as'    => 'panel.login',
+    'as'    => 'admin.login',
     'ueses' => 'AuthController@show_login'
 ]);
 
-Route::group(['middleware' => 'panel.auth'],function()
+Route::group(['middleware' => 'admin.auth'],function()
 {
 
     Route::get('/logout',[
-        'as'    => 'panel.logout',
+        'as'    => 'admin.logout',
         'ueses' => 'AuthController@logout'
     ]);
 
