@@ -1,5 +1,5 @@
 {
-    "name": "freshwork/freshwork-admin",
+    "name": "freshwork/admin",
     "description": "Laravel Control Panel",
     "require": {
         "laravel/framework": "~5.0"
