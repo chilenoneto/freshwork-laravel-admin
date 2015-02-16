@@ -1,0 +1,20 @@
+{
+    "name": "freshwork/freshwork-admin",
+    "description": "Laravel Control Panel",
+    "require": {
+        "laravel/framework": "~5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gonzalo De Spirito",
+            "email": "gonzalo@freshworkstudio.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Freshwork\\Admin\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
