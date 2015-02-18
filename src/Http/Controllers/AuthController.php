@@ -6,7 +6,7 @@ class AuthController extends Controller {
 
     public function show_login()
     {
-
+        return view('panel::auth.login');
     }
 
     public function logout()

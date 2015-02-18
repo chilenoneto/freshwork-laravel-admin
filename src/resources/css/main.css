@@ -1,0 +1,9 @@
+.options,
+.options li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.options li{
+    float:right;
+}
