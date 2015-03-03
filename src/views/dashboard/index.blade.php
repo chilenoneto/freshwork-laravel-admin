@@ -1,5 +1,5 @@
-@extends('panel::layouts.default')
+@extends('admin::layouts.default')
 
 @section('content')
-    Hola
+
 @stop

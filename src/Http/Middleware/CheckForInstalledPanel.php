@@ -21,7 +21,7 @@ class CheckForInstalledPanel implements Middleware {
         return $next($request);
     }
 
-    private function isPanelInstalled()
+    public function isPanelInstalled()
     {
         return file_exists(storage_path().'/app/installed');
     }

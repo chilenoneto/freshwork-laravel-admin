@@ -1,12 +1,17 @@
 <?php namespace Freshwork\Admin\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+use Freshwork\Admin\Http\Middleware\CheckForInstalledPanel;
+use Illuminate\Contracts\Auth\Guard;
 
-class AuthController extends Controller {
+class AuthController extends BaseController {
 
-    public function show_login()
+    public function login(CheckForInstalledPanel $check)
     {
-        return view('panel::auth.login');
+        if(!$check->isPanelInstalled())
+        {
+            return redirect()->route('admin.installer.index');
+        }
+        return view('admin::auth.login');
     }
 
     public function logout()
@@ -14,8 +19,8 @@ class AuthController extends Controller {
 
     }
 
-    public function login()
+    public function processLogin(Guard $auth)
     {
-
+        $auth->attempt(['a' => 'a']);
     }
 }

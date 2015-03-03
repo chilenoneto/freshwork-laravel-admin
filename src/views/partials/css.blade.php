@@ -3,7 +3,8 @@
 <!-- Ionicons -->
 <link href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 <!-- Theme style -->
-<link href="{!! asset('packages/panel-core/css/AdminLTE.css') !!}" rel="stylesheet" type="text/css" />
-<link href="{!! asset('packages/panel-core/css/main.css') !!}" rel="stylesheet" type="text/css" />
+<link href="{!! asset('packages/admin-core/css/AdminLTE.css') !!}" rel="stylesheet" type="text/css" />
+<link href="{!! asset('packages/admin-core/css/main.css') !!}" rel="stylesheet" type="text/css" />
 
-<link href="{!! asset('packages/panel-core/css/datatables/dataTables.bootstrap.css') !!}" rel="stylesheet" type="text/css" />
+<link href="{!! asset('packages/admin-core/css/datatables/dataTables.bootstrap.css') !!}" rel="stylesheet" type="text/css" />
+@yield('css')

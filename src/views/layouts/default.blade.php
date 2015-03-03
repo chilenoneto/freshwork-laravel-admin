@@ -291,7 +291,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="{{ URL::route('panel.dashboard') }}">
+                            <a href="{{ URL::route('admin.dashboard') }}">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -303,13 +303,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ URL::route('panel.tips.index') }}"><i class="fa fa-angle-double-right"></i> Listar todos</a></li>
+                                <li><a href="{{ URL::route('admin.tips.index') }}"><i class="fa fa-angle-double-right"></i> Listar todos</a></li>
                                 <li><a href="{{ URL::route('submit_tip_form') }}"><i class="fa fa-angle-double-right"></i> Nuevo</a></li>
                             </ul>
                         </li>
 
                         <li class="active">
-                            <a href="{{ URL::route('panel.stats.index') }}">
+                            <a href="{{ URL::route('admin.stats.index') }}">
                                 <i class="fa fa-bar-chart"></i> <span>Estadísticas</span>
                             </a>
                         </li>
@@ -343,15 +343,8 @@
         </div><!-- ./wrapper -->
 
 
-        <!-- jQuery 2.0.2 -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- Datatables -->
-        <script src="{!! asset('packages/panel-core/js/plugins/datatables/jquery.dataTables.js') !!}" type="text/javascript"></script>
-        <script src="{!! asset('packages/panel-core/js/plugins/datatables/dataTables.bootstrap.js') !!}" type="text/javascript"></script>
-        <!-- AdminLTE App -->
-        <script src="{!! asset('packages/panel-core/js/AdminLTE/app.js') !!}" type="text/javascript"></script>
+        @include('partials.basejs')
+
         @yield('js')
     </body>
 </html>

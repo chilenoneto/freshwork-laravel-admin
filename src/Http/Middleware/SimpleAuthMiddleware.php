@@ -37,7 +37,7 @@ class SimpleAuthMiddleware implements Middleware {
         }
         else
         {
-            $url = redirect()->getUrlGenerator()->route('admin.login');
+            $url = redirect()->getUrlGenerator()->route('admin.auth.login');
             return redirect()->guest($url);
         }
 
